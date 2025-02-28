@@ -17,9 +17,9 @@ function App() {
         {/* layout */}
         <Route Component={ DefaultLayout }>
 
-          <Route to="/" Component={ Homepage }></Route>
-          <Route to="/about-us" Component={ AboutUs }></Route>
-          <Route to="/posts" Component={ Posts }></Route>
+          <Route path="/" Component={ Homepage }></Route>
+          <Route path="/about-us" Component={ AboutUs }></Route>
+          <Route path="/posts" Component={ Posts }></Route>
 
         </Route>
 

@@ -1,1 +1,5 @@
 @import "./theme-tw.css";
+
+.active {
+    @apply bg-white text-black;
+}

@@ -8,8 +8,12 @@ export default function DefaultLayout () {
     return (
 
         <>
-            <Header />
-            <Outlet />
+            <section className='wrapper font-custom'>
+
+                <Header />
+                <Outlet />
+
+            </section>
 
         </>
 
