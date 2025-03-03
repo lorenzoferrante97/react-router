@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Posts() {
   const [postsList, setPostsList] = useState([]);
@@ -14,26 +15,25 @@ export default function Posts() {
 
   return (
     <main className="container-fluid bg-smoke-50 mt-10u rounded-xl">
-      <section className="row-grid">
+      <section className="row-grid gap-x-5u gap-y-10u px-3u py-7u xl:px-7u">
         {/* ciclare cols con dentro posts */}
 
         {postsList.map((singlePost) => {
-          const { id, title, content, image, tags } = singlePost;
+          const { id, title, tags } = singlePost;
 
           return (
             <>
               <div
-                className="col-span-full flex flex-col perfect-center min-h-[60vh] gap-7u"
+                className="col-span-full md:col-span-4 flex flex-col gap-4u border border-black/10 p-5u rounded-lg shadow-sm bg-white"
                 key={id}
               >
-                <span className="w-full h-28u flex perfect-center bg-smoke-100">{image}</span>
-                <h1 className="font-h1">{title}</h1>
-                <div className="flex gap-2u">
+                <p className="font-body-l-bold">{title}</p>
+                <div className="flex flex-wrap gap-2u">
                   {tags.map((singleTag, i) => {
                     return (
                       <>
                         <span
-                          className="px-3u py-2u font-body-s-regular border border-black rounded-full"
+                          className="px-3u py-2u font-body-s-light border border-black rounded-full"
                           key={i}
                         >
                           {singleTag}
@@ -42,7 +42,12 @@ export default function Posts() {
                     );
                   })}
                 </div>
-                <p className="font-body-base-light">{content}</p>
+                <Link
+                  to={`/posts/${id}`}
+                  className="px-7u py-2u bg-black text-white rounded-full w-fit"
+                >
+                  Vai al post
+                </Link>
               </div>
             </>
           );
