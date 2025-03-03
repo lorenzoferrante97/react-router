@@ -75,10 +75,10 @@ export default function Post() {
           <p className="font-body-base-light">{content}</p>
           {/* prev / next post */}
           <div className="w-full flex items-center justify-between">
-            <button className="px-7u py-2u bg-black text-white rounded-full w-fit" onClick={() => handlePrevClick(prevPostId)}>
+            <button className="px-7u py-2u bg-black text-white rounded-full w-fit hover:cursor-pointer hover:bg-amethyst-600 transition-all" onClick={() => handlePrevClick(prevPostId)}>
               Post precedente
             </button>
-            <button className="px-7u py-2u bg-black text-white rounded-full w-fit" onClick={() => handleNextClick(nextPostId)}>
+            <button className="px-7u py-2u bg-black text-white rounded-full w-fit hover:cursor-pointer hover:bg-amethyst-600 transition-all" onClick={() => handleNextClick(nextPostId)}>
               Post successivo
             </button>
           </div>

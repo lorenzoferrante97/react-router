@@ -36,7 +36,7 @@ export default function Posts() {
                     );
                   })}
                 </div>
-                <Link to={`/posts/${id}`} className="px-7u py-2u bg-black text-white rounded-full w-fit">
+                <Link to={`/posts/${id}`} className="px-7u py-2u bg-black text-white rounded-full w-fit hover:cursor-pointer hover:bg-amethyst-600 transition-all hover:w-full">
                   Vai al post
                 </Link>
               </div>
