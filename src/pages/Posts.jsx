@@ -23,29 +23,20 @@ export default function Posts() {
 
           return (
             <>
-              <div
-                className="col-span-full md:col-span-4 flex flex-col gap-4u border border-black/10 p-5u rounded-lg shadow-sm bg-white"
-                key={id}
-              >
+              <div className="col-span-full md:col-span-4 flex flex-col gap-4u border border-black/10 p-5u rounded-lg shadow-sm bg-white" key={id}>
                 <p className="font-body-l-bold">{title}</p>
                 <div className="flex flex-wrap gap-2u">
                   {tags.map((singleTag, i) => {
                     return (
                       <>
-                        <span
-                          className="px-3u py-2u font-body-s-light border border-black rounded-full"
-                          key={i}
-                        >
+                        <span className="px-3u py-2u font-body-s-light border border-black rounded-full" key={i}>
                           {singleTag}
                         </span>
                       </>
                     );
                   })}
                 </div>
-                <Link
-                  to={`/posts/${id}`}
-                  className="px-7u py-2u bg-black text-white rounded-full w-fit"
-                >
+                <Link to={`/posts/${id}`} className="px-7u py-2u bg-black text-white rounded-full w-fit">
                   Vai al post
                 </Link>
               </div>
